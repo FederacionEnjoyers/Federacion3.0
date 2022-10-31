@@ -58,6 +58,7 @@ func main() {
 		logrus.Fatalf("error occured while running http server: %s", err.Error())
 	}
 }
+
 func initConfig() error {
 	viper.AddConfigPath("config")
 	viper.SetConfigName("config")

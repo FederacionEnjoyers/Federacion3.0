@@ -14,7 +14,7 @@ import (
 // @ID addArticle
 // @Accept json
 // @Produce json
-// @Param input body federacion.Article true "ArticleId"
+// @Param input body entities.Article true "ArticleId"
 // @Success 200 {string} string "token"
 // @Failure 400,404 {object} errorResponse
 // @Failure 500 {object} errorResponse
