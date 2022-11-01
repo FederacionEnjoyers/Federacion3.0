@@ -1,1 +1,16 @@
 port: "8000"
+
+db:
+  username: "postgres"
+  host: "localhost"
+  port: "5436"
+  dbname: "postgres"
+  sslmode: "disable"
+
+cors:
+  allowOrigins: ["*"]
+  allowMethods: ["GET", "POST"]
+  allowHeaders: ["Origin", "Content-Type", "accept"]
+  exposeHeaders: ["Content-Length"]
+  allowCredentials: true
+  maxAge: "12h"
