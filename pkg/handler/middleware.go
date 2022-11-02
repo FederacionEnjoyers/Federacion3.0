@@ -13,6 +13,7 @@ const (
 	userContext         = "userId"
 )
 
+// Allows to identify user in system
 func (h *Handler) userIdentity(c *gin.Context) {
 	header := c.GetHeader(authorizationHeader)
 

@@ -7,9 +7,14 @@ import (
 	"strconv"
 )
 
+// Entity that allows return slice of userAchievements
+
 type getAllUserAchievementsResponse struct {
 	Data []entities.UserAchievement `json:"data"`
 }
+
+// Returns User Achievement By Token
+// If user is not exists return http.BadRequest
 
 func (h *Handler) GetUserAchievementsByToken(c *gin.Context) {
 	userId, err := getUserId(c)
@@ -28,6 +33,8 @@ func (h *Handler) GetUserAchievementsByToken(c *gin.Context) {
 		Data: userAchievements,
 	})
 }
+
+// Returns achievements by user Id
 
 func (h *Handler) GetUserAchievementsById(c *gin.Context) {
 	id, err := strconv.Atoi(c.Param("id"))
